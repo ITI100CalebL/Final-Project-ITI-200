@@ -3,7 +3,7 @@ const bodyParser = require("body-parser")
 const Pool = require('pg').Pool
 require('dotenv').config();
 
-const PORT = process.env.PORT || 5432;
+const PORT = process.env.PORT || 3000;
 
 const pool = new Pool({
   user: process.env.DB_USER,
