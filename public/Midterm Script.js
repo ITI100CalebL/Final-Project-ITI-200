@@ -1,6 +1,15 @@
 $(document).ready(function(){
 
 
+    function yourFunction(){
+
+        loadMessages();
+    
+        setTimeout(yourFunction, 1000);
+    }
+    
+    yourFunction();
+
     function loadMessages() {
 
         $(".list").empty();
@@ -15,23 +24,23 @@ $(document).ready(function(){
     
    
     
-        // Call this function when the open is opened
-        loadMessages();
-    
-        $("form").submit(function () {
-    
-            const data = {
-                author: $("#author").val(),
-                title: $("#title").val()
-            }
-    
-            $.post("/api/messages/create", data, function (response) {
-                loadMessages();
-                console.log("Done");
-            });
-    
-            return false;
-        })
+    // Call this function when the open is opened
+    loadMessages();
+
+    $("form").submit(function () {
+
+        const data = {
+            author: $("#author").val(),
+            title: $("#title").val()
+        }
+
+        $.post("/api/messages/create", data, function (response) {
+            loadMessages();
+            console.log("Done");
+        });
+
+        return false;
+    })
     
 
 

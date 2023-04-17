@@ -6,10 +6,10 @@ require('dotenv').config();
 const PORT = process.env.PORT || 3000;
 
 const pool = new Pool({
-  user: process.env.DB_USER,
-  host: process.env.DB_HOST,
-  database: process.env.DB_DATABASE,
-  password: process.env.DB_PASSWORD,
+  user: "postgres",
+  host: "midterm-db-inst.civsmebsnadf.us-east-2.rds.amazonaws.com",
+  database: "midterm_db_name",
+  password: "postgres",
   port: 5432,
 })
 
@@ -30,9 +30,9 @@ app.get("/api/messages", (req, res) => {
 
 app.post("/api/messages/create", (req, res) => {
 
-  const body = req.body;
+  const data = req.body;
 
-  const sql = "INSERT INTO messages (title, author) VALUES ('" + body.title + "','" + body.author + "')"
+  const sql = "INSERT INTO messages (response, username) VALUES ('" + data.title + "','" + data.author + "')"
 
   pool.query(sql, (error, results) => {
 
