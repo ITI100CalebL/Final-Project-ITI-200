@@ -7,7 +7,7 @@ $(document).ready(function(){
     
         $.get("/api/messages", function (response) {
     
-            for (const book of response) {
+            for (const messages of response) {
                 $(".list").append("<li>" + messages.id + " " + messages.username + ": " + messages.response + " - " + messages.timestamp + "</li>")
             }
         });
