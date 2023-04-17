@@ -1,0 +1,48 @@
+		body {
+			background-image:url("https://midterm-pic.s3.us-east-2.amazonaws.com/Accord+image.jpg");
+				color: black;
+				font-size: 14px;
+				background-color: gray;
+				font-family: Georgia;
+				margin: 0px;
+				padding:0px;
+			}
+
+			h1{
+				font-family: Georgia;
+				font-size: 50px;
+			}
+			h4{
+				font-family: Georgia;
+				font-size: 30px;
+			}
+			h3{
+				color:blue;
+				font-family: Georgia;
+				font-size: 23px;
+			}
+			p{
+				font-family: Georgia;
+				font-size: 18px;
+			}
+			#Subscription{
+				
+				padding-left: 15px;
+
+			}
+			.Membership{
+				color: red;
+			}
+
+
+			.container{
+				
+				background-color: whitesmoke;
+				font-size: 15px;
+
+			}
+
+			html{
+				background-color: red;
+			}
+						
