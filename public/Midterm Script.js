@@ -13,7 +13,7 @@ $(document).ready(function(){
         });
     }
     
-    $(document).ready(function () {
+   
     
         // Call this function when the open is opened
         loadMessages();
@@ -32,7 +32,7 @@ $(document).ready(function(){
     
             return false;
         })
-    });
+    
 
 
 $("#homeLink").click(function(){
